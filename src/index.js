@@ -12,6 +12,7 @@ import UserLayout from "./components/User/UserLayout";
 import DashboardDefault from "./components/DashboardDefault";
 import AdminLayout from "./components/Admin/AdminLayout";
 import Chart from "./components/Chart";
+import Signin from "./pages/Signin";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "signin",
+        element: <Signin />,
       },
       {
         path: "register",
