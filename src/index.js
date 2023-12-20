@@ -14,6 +14,7 @@ import AdminLayout from "./components/Admin/AdminLayout";
 import Chart from "./components/Chart";
 import Signin from "./pages/Signin";
 import Loadable from "./components/Loadable";
+// import { Provider as ReduxProvider } from 'react-redux';
 
 const LoadLoginPage = Loadable(lazy(() => import("./pages/Login")));
 
@@ -85,7 +86,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
+    {/* <ReduxProvider store={store}> */}
     <RouterProvider router={router} />
+    {/* </ReduxProvider> */}
   </React.StrictMode>
 );
 
