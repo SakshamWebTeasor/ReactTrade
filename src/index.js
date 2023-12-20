@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -13,6 +13,9 @@ import DashboardDefault from "./components/DashboardDefault";
 import AdminLayout from "./components/Admin/AdminLayout";
 import Chart from "./components/Chart";
 import Signin from "./pages/Signin";
+import Loadable from "./components/Loadable";
+
+const LoadLoginPage = Loadable(lazy(() => import("./pages/Login")));
 
 const router = createBrowserRouter([
   {
@@ -22,7 +25,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "login",
-        element: <Login />,
+        element: <LoadLoginPage />, // <Login />
       },
       {
         path: "signin",
